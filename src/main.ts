@@ -111,4 +111,17 @@ class LinkedList {
 
     return false;
   }
+
+  find(value: any) {
+    let current = this.head;
+    let index = 0;
+
+    while (current !== null) {
+      if (current.value === value) return index;
+      current = current.nextNode;
+      index++;
+    }
+
+    return null;
+  }
 }
