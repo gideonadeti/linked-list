@@ -175,4 +175,18 @@ class LinkedList {
       current.nextNode = current.nextNode.nextNode;
     }
   }
+
+  toString() {
+    let result = [];
+    let current = this.head;
+
+    while (current !== null) {
+      result.push(`( ${current.value} )`);
+      current = current.nextNode;
+    }
+
+    result.push("null");
+
+    return result.join(" -> ");
+  }
 }
