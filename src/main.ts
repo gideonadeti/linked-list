@@ -7,3 +7,11 @@ class Node {
     this.nextNode = null;
   }
 }
+
+class LinkedList {
+  head: Node | null;
+
+  constructor() {
+    this.head = null;
+  }
+}
