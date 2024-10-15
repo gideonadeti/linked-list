@@ -77,4 +77,26 @@ class LinkedList {
 
     return null;
   }
+
+  pop() {
+    let current = this.head;
+
+    if (current === null) return null;
+
+    if (current.nextNode === null) {
+      const tail = this.head;
+      this.head = null;
+
+      return tail;
+    }
+
+    while (current.nextNode?.nextNode !== null) {
+      current = current.nextNode as Node;
+    }
+
+    const tail = current.nextNode as Node;
+    current.nextNode = null;
+
+    return tail;
+  }
 }
