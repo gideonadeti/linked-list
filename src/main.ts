@@ -14,4 +14,20 @@ class LinkedList {
   constructor() {
     this.head = null;
   }
+
+  append(value: any) {
+    let node = new Node(value);
+
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      let current = this.head;
+
+      while (current.nextNode !== null) {
+        current = current.nextNode;
+      }
+
+      current.nextNode = node;
+    }
+  }
 }
