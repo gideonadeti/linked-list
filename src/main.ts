@@ -195,26 +195,28 @@ class LinkedList {
 const linkedList = new LinkedList();
 
 linkedList.append(1);
+console.log(".append(1):", linkedList.toString());
+
 linkedList.prepend(0);
-console.log(linkedList.toString());
+console.log(".prepend(0):", linkedList.toString());
 
 const size = linkedList.size();
-console.log(size);
+console.log(".size():", size);
 
 const head = linkedList.getHead();
-console.log(head);
+console.log(".getHead():", head);
 
 const tail = linkedList.getTail();
-console.log(tail);
+console.log(".getTail():", tail);
 
 const lastNode = linkedList.at(1);
-console.log(lastNode);
+console.log(".at(1):", lastNode);
 
 const popped = linkedList.pop();
-console.log(popped);
+console.log(".pop():", popped);
 
 linkedList.insertAt(0.5, 1);
-console.log(linkedList.toString());
+console.log(".insertAt(0.5, 1):", linkedList.toString());
 
 linkedList.removeAt(1);
-console.log(linkedList.toString());
+console.log(".removeAt(1)", linkedList.toString());
