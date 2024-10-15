@@ -190,3 +190,31 @@ class LinkedList {
     return result.join(" -> ");
   }
 }
+
+// Tests
+const linkedList = new LinkedList();
+
+linkedList.append(1);
+linkedList.prepend(0);
+console.log(linkedList.toString());
+
+const size = linkedList.size();
+console.log(size);
+
+const head = linkedList.getHead();
+console.log(head);
+
+const tail = linkedList.getTail();
+console.log(tail);
+
+const lastNode = linkedList.at(1);
+console.log(lastNode);
+
+const popped = linkedList.pop();
+console.log(popped);
+
+linkedList.insertAt(0.5, 1);
+console.log(linkedList.toString());
+
+linkedList.removeAt(1);
+console.log(linkedList.toString());
