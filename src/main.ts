@@ -124,4 +124,30 @@ class LinkedList {
 
     return null;
   }
+
+  insertAt(value: any, index: number) {
+    if (index < 0 || index > this.size()) {
+      throw new Error("Index out of bounds");
+    }
+
+    if (index === 0) {
+      return this.prepend(value);
+    }
+
+    if (index === this.size()) {
+      return this.append(value);
+    }
+
+    const node = new Node(value);
+    let currentNode = this.head;
+    let currentIndex = 0;
+
+    while (currentIndex < index - 1) {
+      currentNode = currentNode?.nextNode as Node;
+      currentIndex++;
+    }
+
+    node.nextNode = currentNode?.nextNode as Node;
+    (currentNode as Node).nextNode = node;
+  }
 }
