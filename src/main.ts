@@ -30,4 +30,10 @@ class LinkedList {
       current.nextNode = node;
     }
   }
+
+  prepend(value: any) {
+    const node = new Node(value);
+    node.nextNode = this.head;
+    this.head = node;
+  }
 }
