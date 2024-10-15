@@ -48,4 +48,20 @@ class LinkedList {
 
     return count;
   }
+
+  getHead() {
+    return this.head;
+  }
+
+  getTail() {
+    if (this.head === null) return null;
+
+    let current = this.head;
+
+    while (current.nextNode !== null) {
+      current = current.nextNode;
+    }
+
+    return current;
+  }
 }
